@@ -14,4 +14,16 @@ Un outil puissant pour casser les mots de passe (cracking).
 - **Attaque par dictionnaire** : Tester une liste de mots courants (ex: `rockyou.txt`).
 - **Commande type** : 
   ```
-  john --wordlist=/usr/share/wordlists/rockyou.txt hash.txt
+  john --wordlist=/usr/share/wordlists/rockyou.txt hash.txt ```
+  
+### 2. Identification de Hash
+Avant de casser un hash, il faut savoir de quel type il s'agit.
+
+Utilisation d'outils comme hash-identifier ou des services en ligne pour distinguer un MD5 d'un SHA-1.
+
+🛡️ Pourquoi le Hachage est crucial ?
+En cybersécurité, on ne stocke jamais un mot de passe en "clair" dans une base de données. On stocke son hash. Si la base de données est volée, l'attaquant n'a que les empreintes et doit utiliser des outils comme John the Ripper ou Hashcat pour retrouver les originaux.
+
+## 📝 Ce que j'ai retenu
+La différence entre chiffrer (réversible) et hacher (non réversible). 
+J'ai également appris que la force d'un mot de passe ne dépend pas seulement de sa complexité, mais aussi de la robustesse de l'algorithme de hachage utilisé (ex: préférer Argon2 ou Bcrypt à MD5).
